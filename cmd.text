@@ -1,0 +1,648 @@
+    1  ls
+    2  cd Desktop
+    3  sudo apt install ./code_1.57.0-1623259737_amd64.deb
+    4  sudo apt install ./code.deb
+    5  cd ..
+    6  cd Downloads
+    7  sudo apt install ./code.deb
+    8  unzip e AdminLTE-3.1.0.zip
+    9  unzip AdminLTE-3.1.0.zip
+   10  lampp start
+   11  cd /
+   12  sudo su
+   13  unzip BizLand.zip
+   14  unzip FlexStart.zip
+   15  chmod 755 xampp-linux64-8.0.7-0-installer.run
+   16  chmod 755 xampp.run
+   17  sudo ./xampp.run
+   18  sudo /opt/lampp/lampp start
+   19  unzip BizLand
+   20  pwd
+   21  dir
+   22  cd Do
+   23  cd Downloads
+   24  dir
+   25  about.jpeg more
+   26  cd more.
+   27  dir
+   28  cd ..
+   29  cd Desktop
+   30  dir
+   31  cd taic2020
+   32  dir
+   33  index.html more
+   34  dir
+   35  git init
+   36  git add readmore.txt
+   37  git status
+   38  git commit -m "This is my first commit for taic2021 project"
+   39  git add
+   40  git add .
+   41  git status
+   42  git commit -m "This is my first commit for taic2021 project i only updated the index.html and little updates on "
+   43  git remote add origin https://github.com/Mayenga/taic2021.git
+   44  git status
+   45  git push -u origin master
+   46  git status
+   47  git add Readme.txt
+   48  git status
+   49  git add Readme.txt
+   50  git status
+   51  git add .
+   52  git status
+   53  git add Readme.txt
+   54  git status
+   55  git commit -m "i updated read me file" 
+   56  git add Readme.txt
+   57  git status
+   58  git push 
+   59  git status
+   60  git push -u origin master
+   61  git add Readme.txt
+   62  git commit -m "i updated read me file again" 
+   63  git push -u otigin master
+   64  git push -u origin master
+   65  git status
+   66  git add Readme.txt
+   67  git commit -m "i updated read me file and i deleted all other content but no new content yet" 
+   68  git add index.html
+   69  git commit -m "I updated index on head section changed - to :"
+   70  git push -u origin master
+   71  git status
+   72  git add index.html
+   73  git status
+   74  git restore --staged index.html
+   75  git status
+   76  git add .
+   77  git status
+   78  git commit -m "I updated index and read me"
+   79  git push -u origin master
+   80  git status
+   81  ping google.com
+   82  cls
+   83  clear
+   84  ping ictc.go.tz
+   85  clear
+   86  ping google
+   87  ping google.com
+   88  clear
+   89  ping softcenter.ictc.go.tz
+   90  ftp softcenter.ictc.go.tz
+   91  clear
+   92  ftp
+   93  pwd
+   94  dir
+   95  clear
+   96  ftp softcenter.ictc.go.tz
+   97  crear
+   98  user
+   99  clear
+  100  dir
+  101  cd ..
+  102  dir
+  103  dir
+  104  tar xf flutter_linux_2.2.2-stable.tar.xz
+  105  dir
+  106  ./studio.sh
+  107  gzip -d android-studio-ide-202.7351085-linux.tar.gz
+  108  DIR
+  109  dir
+  110  source .bash_profile
+  111  flutter doctor
+  112  flutter doctor --android-licenses
+  113  flutter doctor
+  114  pwd
+  115  git init
+  116  git status
+  117  git add .
+  118  git status
+  119  git commit -m "I updated index and added bronzer, gold, main, silverSponsor details files also deleted some folders"
+  120  git remote add origin https://github.com/Mayenga/taic2021.git
+  121  git push -u origin master
+  122  chmod a+x genymotion-3.2.1-linux_x64.bin
+  123  ./genymotion-3.2.1-linux_x64.bin
+  124  sudo apt install ./virtualbox-6.1_6.1.22-144080\~Ubuntu\~eoan_amd64.deb
+  125  sudo dpkg -i virtualbox-6.1_6.1.22-144080\~Ubuntu\~eoan_amd64.deb
+  126  ./studio.sh
+  127  pwd
+  128  git clone https://github.com/Mayenga/SmartRc.git
+  129  dir
+  130  cd SmartRc
+  131  dir
+  132  cd lib
+  133  dir
+  134  cd ..
+  135  dir
+  136  git add .
+  137  git status
+  138  git commit -m "I just commited everthing now"
+  139  git remote add origin https://github.com/ikulu/TAIC2021.git
+  140  git remot -v
+  141  git remote -v
+  142  git remote add origin https://github.com/ikulu/TAIC2021.git
+  143  git init
+  144  git status
+  145  git remote add origin https://github.com/ikulu/TAIC2021.git
+  146  git remot rm origin
+  147  git remote rm origin
+  148  git remote add origin https://github.com/ikulu/TAIC2021.git
+  149  git push -u origin master
+  150  git add index.html
+  151  git status
+  152  git commit -m "updated testmonials section"
+  153  git status
+  154  git add .
+  155  git commit -m "updated a lot of things today"
+  156  git status
+  157  git push -u origin master
+  158  git status
+  159  git add .
+  160  git commit -m "updated banner"
+  161  git push -u origin master
+  162  ./sdkmanager --licenses
+  163  ./studio.sh
+  164  which flutter
+  165  cd ..
+  166  which flutter
+  167  dir
+  168  cd flutter
+  169  which flutter
+  170  clear
+  171  bash --version
+  172  curl --​version
+  173  curl --help
+  174  curl --V
+  175  curl --v
+  176  curl
+  177  curl --version
+  178  git --version
+  179  cd ..
+  180  mkdir hellowTest
+  181  clear
+  182  dir
+  183  cd flutter
+  184  export PATH="$PATH:`pwd`/flutter/bin"
+  185  flutter doctor
+  186  cd ..
+  187  flutter doctor
+  188  cd flutter
+  189  vim $HOME/.zshrc
+  190  git status
+  191  git add .
+  192  git commit -m "updated today 24/06/2021"
+  193  git push -u origin master
+  194  flutter doctor
+  195  pwd
+  196  cd ..
+  197  dir
+  198  cd ..
+  199  dir
+  200  cd Documents
+  201  dir
+  202  cd Flutter\ Inovation
+  203  cd ..
+  204  cd development
+  205  flutter doctor
+  206  flutter sdk-path
+  207  sudo snap install flutter --classic
+  208  cd flutter
+  209  sudo snap install flutter --classic
+  210  flutter sdk-path
+  211  clear
+  212  vim $HOME/.zshrc~
+  213  clear
+  214  vim $HOME/.zshrc~
+  215  clear
+  216  vim $HOME/.zshrc~
+  217  flutter doctor
+  218  vim $HOME/.zshrc~
+  219  cd bin
+  220  flutter doctor
+  221  flutter 
+  222  flutter doctor
+  223  echo $PATH
+  224  cd ..
+  225  echo $PATH
+  226  which flutter
+  227  java -version
+  228  pwd
+  229  cd /
+  230  pwd
+  231  dir
+  232  cd home
+  233  cd smartvn
+  234  pwd
+  235  clear
+  236  vim .bashrc
+  237  source .bashrc
+  238  clear
+  239  vim .bashrc
+  240  cd /
+  241  cd home
+  242  cd smartvn
+  243  clear
+  244  vim .bashrc
+  245  source .bashrc
+  246  source .zshrc
+  247  pwd
+  248  echo $PATH
+  249  which flutter
+  250  pwd
+  251  vim .bashrc
+  252  source .bashrc
+  253  which flutter
+  254  echo $PATH
+  255  vim .bashrc
+  256  source .bashrc
+  257  git add .
+  258  git commit -m "updated today 24/06/2021 18:28"
+  259  git push -u origin master
+  260  git add .
+  261  git status
+  262  git commit -m "updated today 24/06/2021 19:01"
+  263  git push -u origin master
+  264  vim .zshrc
+  265  source .zshrc
+  266  echo $PATH
+  267  flutter doctor
+  268  pwd
+  269  cd ..
+  270  pwd
+  271  clear
+  272  git status
+  273  git add .
+  274  git commit -m "updated today 25/06/2021 13:11"
+  275  git push -u origin master
+  276  clear
+  277  git status
+  278  git add .
+  279  git commit -m "updated today 25/06/2021 17:12"
+  280  git push -u origin master
+  281  echo $PATH
+  282  vim .bashrc
+  283  echo $PATH
+  284  which flutter
+  285  flutter doctor
+  286  vim .zshrc
+  287  pwd
+  288  vim .zshrc
+  289  echo $PATH
+  290  source .zshrc
+  291  pwd
+  292  vim .zshrc
+  293  source .zshrc
+  294  flutter doctor
+  295  ./studio.sh
+  296  sh ./shudio.sh
+  297  pwd
+  298  ./studio.sh
+  299  getit .bashrc
+  300  sudo apt update
+  301  pwd
+  302  sudo apt update
+  303  apt-get install sudo
+  304  clear
+  305  dir
+  306  source .zshrc
+  307  source .zshrcpwd
+  308  pwd
+  309  cd /
+  310  cd home
+  311  cd smartvn
+  312  echo $PATH
+  313  source .zshrc
+  314  dir
+  315  echo $PATH
+  316  flutter doctor
+  317  git add .
+  318  dir
+  319  git status
+  320  git add .
+  321  git commit -m "updated today 28/06/2021 09:10"
+  322  git push -u origin master
+  323  git status
+  324  pwd
+  325  cd /
+  326  cd home
+  327  cd smartvn
+  328  cd Documents
+  329  dir
+  330  cd flutter inovation
+  331  cd Flutter inovation
+  332  dir
+  333  cd Flutter\ Inovation
+  334  flutter create
+  335  ./studio.sh
+  336  echo $PATH
+  337  source .zshrc
+  338  cd smartvn
+  339  cd /
+  340  cd home
+  341  cd smartvn
+  342  source .zshrc
+  343  cd ..
+  344  pwd
+  345  source .bash_profile
+  346  cd smartvn
+  347  source .bash_profile
+  348  flutter doctor
+  349  source .zshrc
+  350  flutter doctor
+  351  flutter doctor --android-licenses
+  352  flutter doctor
+  353  cd ..
+  354  cd Documents
+  355  cd Flutter\ Inovation
+  356  clear
+  357  flutter create smartRoman
+  358  flutter create smart_roman_catholic
+  359  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  360  google-chrome
+  361  ./studio.sh
+  362  clear
+  363  dor
+  364  dir
+  365  git init
+  366  git status
+  367  git add .
+  368  git status
+  369  git commit -m "this is official app and i have commited just now"
+  370  git status
+  371  git push -u origin master
+  372  git remote add origin https://github.com/Mayenga
+  373  git status
+  374  git add .
+  375  git commit -m "changes of today 28/06/2021"
+  376  git status
+  377  ./studio.sh
+  378  git status
+  379  git add .
+  380  git commit -m "changes of today 29/06/2021"
+  381  git push -u origin master
+  382  tar -xvf LibreOffice_7.1.4_Linux_x86-64_rpm.tar.gz
+  383  dir
+  384  cd LibreOffice_7.1.4.2_Linux_x86-64_rpm
+  385  dir
+  386  cd RPMS
+  387  sudo dpkg -i lib*
+  388  su -c 'rpm -Uvh *.rpm\nOffice\n
+  389  su -c 'rpm -Uvh *.rpm'\n
+  390  sudo dpkg -i *.deb
+  391  su -c 'yum install *.rpm'\n
+  392  sudo apt-get update
+  393  sudo apt-get install libreoffice
+  394  ./studio.sh
+  395  git add .
+  396  git commit -m "changes of today 30/06/2021"
+  397  git push -u origin master
+  398  clear
+  399  ./studio.sh
+  400  clear
+  401  ./studio.sh
+  402  git add .
+  403  git commit -m "changes of today 1/07/2021"
+  404  git push -u origin master
+  405  git clone https://github.com/pedromassango/bottom_navy_bar.git
+  406  git add .
+  407  git commit -m "changes of today 1/07/2021"
+  408  git push -u origin master
+  409  git add .
+  410  git commit -m "changes of today 1/07/2021"
+  411  git push -u origin master
+  412  cd ..
+  413  lampp start
+  414  cd b
+  415  cd bin
+  416  cd ..
+  417  lampp start
+  418  lampp stop
+  419  wget http://repo.mysql.com/mysql-apt-config_0.8.9-1_all.deb
+  420  cd ..
+  421  wget http://repo.mysql.com/mysql-apt-config_0.8.9-1_all.deb
+  422  sudo wget http://repo.mysql.com/mysql-apt-config_0.8.9-1_all.deb
+  423  sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb
+  424  mysql_secure_installation
+  425  wget http://repo.mysql.com/mysql-apt-config_0.8.9-1_all.deb
+  426  sudo wget http://repo.mysql.com/mysql-apt-config_0.8.9-1_all.deb
+  427  sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb
+  428  mysql_secure_installation
+  429  sudo apt-get install apache2
+  430  sudo apt-get update
+  431  sudo apt-get install php7.2
+  432  php -v
+  433  cd /var
+  434  cd www/html
+  435  cd laravel
+  436  service apache2 start
+  437  cd /
+  438  cd home
+  439  cd smartvn
+  440  clear
+  441  sudo apt-get install composer
+  442  apt --fix-broken install
+  443  sudo apt --fix-broken install
+  444  sudo apt-get install composer
+  445  cd Desktop
+  446  composer create-project --prefer-dist laravel/laravel TanzaniaICTAwards
+  447  cd TanzaniaICTAwards
+  448  php artisan serve
+  449  cd /
+  450  cd home
+  451  cd smartvn
+  452  clear
+  453  sudo apt update
+  454  sudo apt install php
+  455  sudo apt install curl
+  456  sudo apt install php-common
+  457  sudo apt install php-curl
+  458  sudo apt install php-json
+  459  sudo apt install php-readline
+  460  sudo apt install php-fpm
+  461  sudo apt install php-cli
+  462  sudo apt install php-xml
+  463  sudo apt install php-mycrypt
+  464  sudo apt install php-zip
+  465  sudo apt install php-mbstring
+  466  sudo apt install php-gd
+  467  sudo apt autoremove
+  468  sudo phpenmod mycrypt
+  469  composer
+  470  nano ~/.bashrc
+  471  echo $PATH
+  472  nano ~/.bashrc
+  473  cd var
+  474  cd /var
+  475  cd www/html
+  476  clear
+  477  apt-get install git
+  478  sudo apt-get install git
+  479  git clone https://github.com/laravel/laravel.git
+  480  sudo git clone https://github.com/laravel/laravel.git
+  481  cd laravel
+  482  curl --sS https://getcomposer.org/installer | php
+  483  curl --ss https://getcomposer.org/installer | php
+  484  curl -ss https://getcomposer.org/installer | php
+  485  sudo curl -ss https://getcomposer.org/installer | php
+  486  chown -R www-data.www-data /var/www/html/laravel
+  487  sudo chown -R www-data.www-data /var/www/html/laravel
+  488  chmod -R 755 /var/www/html/laravel
+  489  chmod -R 755 /var/WWW/html/laravel
+  490  chmod -R 755 
+  491  chmod -R 755 /var/WWW/html/laravel
+  492  chmod -R 755 /var/www/html/laravel
+  493  sudo chmod -R 755 /var/www/html/laravel
+  494  cp .env.example .env
+  495  sudo cp .env.example .env
+  496  chown -R www-data.www-data .env
+  497  sudo chown -R www-data.www-data .env
+  498  php artisan key:generate
+  499  sudo php artisan key:generate
+  500  service apache2 start
+  501  sudo lampp start
+  502  sudo su
+  503  echo $PATH
+  504  composer require "laravel/installer=~1.1"
+  505  cd home
+  506  cd sm
+  507  cd smartvn
+  508  cd home
+  509  pwd
+  510  composer require "laravel/installer=~1.1"
+  511  ls .composer
+  512  cd /
+  513  ls .composer
+  514  ls vendor
+  515  pwd
+  516  cd home
+  517  cd smartvn
+  518  cd Desktop
+  519  cd /
+  520  cd composer
+  521  composer -v
+  522  composer status
+  523  cd /usr
+  524  cd local
+  525  cd bin
+  526  cd composer
+  527  cd /
+  528  php -v
+  529  composer
+  530  composer global require laravel/installer
+  531  composer fund
+  532  composer update
+  533  cd home
+  534  cd smartvn
+  535  composer global require laravel/installer
+  536  composer fund
+  537  composer global require laravel/installer
+  538  cd home
+  539  pwd
+  540  curl -s https://laravel.build/tanzania-ict-awards | bash
+  541  sudo apt update
+  542  sudo apt install -y docker.io
+  543  sudo systemctl enable docker --now
+  544  docker
+  545  pwd
+  546  cd Desktop
+  547  curl -s https://laravel.build/tanzania-ict-awards | bash
+  548  docker
+  549  docker run
+  550  docker run --help
+  551  curl -s https://laravel.build/tanzania-ict-awards | bash
+  552  composer create-project laravel/laravel tanzania-ict-awards
+  553  cd tanzania-ict-awards
+  554  php artisan serve
+  555  cd Desktop
+  556  cd tanzania-ict-awards
+  557  php artisan make:auth
+  558  cd ..
+  559  cd tanzania-ict-awards
+  560  composer require laravel/ui
+  561  php artisan ui vue --auth
+  562  php artisan migrate
+  563  cd htdocs
+  564  sudo cd htdocs
+  565  ls -ld /opt/lampp/htdocs
+  566  sudo chmod -R 777 /opt/lampp/htdocs
+  567  sudo chmod 700 /opt/lampp/htdocs
+  568  cd Desktop
+  569  cd tanzania-ict-awards
+  570  clear
+  571  php artisan serve
+  572  sudo su
+  573  git status
+  574  git add .
+  575  git commit -m "changes of today 06/07/2021"
+  576  git push -u origin master
+  577  sudo su
+  578  git add .
+  579  git commit -m "changes of today 12/07/2021"
+  580  git push -u origin master
+  581  sudo su
+  582  composer require phpmailer/phpmailer
+  583  ls -la
+  584  git init
+  585  git add .
+  586  git commit -m "changes of today 20/07/2021"
+  587  git remote add origin https://github.com/Mayenga/ictAwards2021.git
+  588  git push -u origin master
+  589  composer require phpmailer/phpmailer
+  590  sudo su
+  591  cd ..
+  592  composer require phpmailer/phpmailer
+  593  composer require zendframework/zend-mail
+  594  composer fund
+  595  composer require phpmailer/phpmailer
+  596  git status
+  597  git commit -m "changes of today 27/07/2021"
+  598  git push -u origin master
+  599  git status
+  600  git commit -m "changes of today 27/07/2021"
+  601  git status
+  602  git commit -m "changes of today 27/07/2021"
+  603  git push -u origin master
+  604  git status
+  605  git init~
+  606  git init
+  607  git add .
+  608  git status
+  609  git commit -m "changes of today 27/07/2021"
+  610  git push -u origin master
+  611  sudo su
+  612  git status
+  613  git add .
+  614  git commit -m "changes of today 30/07/2021"
+  615  git push -u origin master
+  616  git clone https://github.com/Santos-Enoque/money_manager_app_with_flutter.git
+  617  studio.sh
+  618  ./
+  619  ./studio.sh
+  620  git status
+  621  git add .
+  622  git commit -m "changes of today 04/08/2021"
+  623  git status
+  624  git push -u origin master
+  625  git remote add origin https://github.com/ikulu/ictAwards2021.git
+  626  git remote rm origin
+  627  git remote add origin https://github.com/ikulu/ictAwards2021.git
+  628  git push origin master 
+  629  git add .
+  630  git commit -m "changes of today 04/08/2021"; git push 
+  631  git commit -m "changes of today 04/08/2021"; git push orign master
+  632  git commit -m "changes of today 04/08/2021";
+  633  git push origin master 
+  634  git reset default.php
+  635  cd app
+  636  git reset default.php
+  637  git push origin master 
+  638  git status
+  639  cd ..
+  640  git status
+  641  ll
+  642  nano .gitignore
+  643  git status
+  644  git commit -m "changes of today 04/08/2021";
+  645  git add .
+  646  git commit -m "changes of today 04/08/2021";
+  647  git push origin master 
+  648  history
