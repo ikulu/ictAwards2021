@@ -9,7 +9,6 @@ $con = mysqli_connect("$server","$host","$pwd","$db");
 $yes=mysqli_select_db($con, "$db");
 if(!$yes){
  echo"Server is offline.. comeback later!";
-
 }
 
 ?>
