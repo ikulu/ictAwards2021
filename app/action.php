@@ -1,14 +1,62 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require '../vendor/autoload.php';
+
 require 'default.php';
 session_start();
 
-// require './sendEmails.php';
+$mail = new PHPMailer(TRUE);
 
 //send verification codes
 if(isset($_POST['verification'])){
 	$name = trim($_POST['name']);
 	$email = trim($_POST['email']);
-	// sendVerificationEmail($name,$email);
+
+	try {
+   
+		$mail->setFrom('ictawards@taic2021.co.tz', 'Darth Vader');
+		$mail->addAddress('mayenganicholaus66@gmail.com', 'Emperor');
+		$mail->Subject = 'Force';
+		$mail->Body = 'There is a great disturbance in the Force.';
+		
+		/* SMTP parameters. */
+		
+		/* Tells PHPMailer to use SMTP. */
+		$mail->isSMTP();
+		
+		/* SMTP server address. */
+		$mail->Host = 'mail.taic2021.co.tz';
+	 
+		/* Use SMTP authentication. */
+		$mail->SMTPAuth = TRUE;
+		
+		/* Set the encryption system. */
+		$mail->SMTPSecure = 'tls';
+		
+		/* SMTP authentication username. */
+		$mail->Username = 'ictawards@taic2021.co.tz';
+		
+		/* SMTP authentication password. */
+		$mail->Password = 'nicholaus12345678910';
+		
+		/* Set the SMTP port. */
+		$mail->Port = 465;
+		
+		/* Finally send the mail. */
+		$mail->send();
+	 }
+	 catch (Exception $e)
+	 {
+		echo $e->errorMessage();
+	 }
+	 catch (\Exception $e)
+	 {
+		echo $e->getMessage();
+	 }
+	// echo '<script language="javascript">';
+    // echo 'alert("Verified");location.href="./regNominees.php";';
+    // echo '</script>';
 }
 
 // register watu wanaopendekeza
@@ -28,14 +76,13 @@ if(isset($_POST['register'])){
 	$bir = trim($_POST['bir']);
 	$user = '';
 	$token = 'gyuegruih893758947nojkgf';
-
-	// sendVerificationEmail($email,$token);
 	
 	//validation for the inputs 
 	if($bic == "" || $btoc == "" || $mic == "" || $bicc == "" || $bicAG == "" || $bicPS == "" || $bcpsHIM == "" || $bicITSD == "" || $byiE == "" || $bir == ""){
 		echo '<script language="javascript">';
         echo 'alert("Please norminate in all categories");location.href="./regNominees.php";';
         echo '</script>';
+		exit;
 	}
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		echo '<script language="javascript">';
@@ -153,7 +200,7 @@ if(isset($_POST['RegisterCompany'])){
 if(isset($_POST['login'])){
 	$user = $_POST['email'];
 	$pwd = $_POST['password'];
-
+	
 	$queryOne = "SELECT * FROM admins WHERE email = '$user' AND password = '$pwd'";
     $query_runOne = mysqli_query($con,$queryOne);
 
