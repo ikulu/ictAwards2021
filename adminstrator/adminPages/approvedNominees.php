@@ -1,19 +1,20 @@
 <?php
-    require '../action.php';
+require '../action.php';
+
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ../index.php');
+	exit;
+}
+
+$noww = time(); // Checking the time now when home page starts.
+if ($noww > $_SESSION['expire']) {
+    session_destroy();
+    header('Location: ../index.php');
+}
+
     require '../../components/adminAside.php';
     require '../../components/adminNavbar.php';
     require '../../components/adminFooter.php';
-
-    if (!isset($_SESSION['loggedin'])) {
-      header('Location: ../index.php');
-      exit;
-    }
-    
-    $noww = time(); // Checking the time now when home page starts.
-    if ($noww > $_SESSION['expire']) {
-        session_destroy();
-        header('Location: ../index.php');
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +43,7 @@
           document.getElementById("data").innerHTML=this.responseText;
         }
       }
-      xmlhttp.open("GET","./getdata.php?q="+str,true);
+      xmlhttp.open("GET","./getApproved.php?q="+str,true);
       xmlhttp.send();
     }
   </script>
@@ -69,12 +70,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Norminated Companies</h1>
+            <h1 class="m-0">Approved Nominees</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../adminPages/admnHome.php">Home</a></li>
-              <li class="breadcrumb-item active">Norminated Companies</li>
+              <li class="breadcrumb-item"><a href="../admnHome.php">Home</a></li>
+              <li class="breadcrumb-item active">Approved Nominees</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -103,7 +104,7 @@
         </form>
       <div id="data" class="card-body table-responsive p-0">
         <table id="table_id" class="display table table-hover text-nowrap">
-            <tr><td>Nominated Company will be shown here</td></tr>
+            <tr><td>Approved Companies will be shown here</td></tr>
         </table>
 
         </div>

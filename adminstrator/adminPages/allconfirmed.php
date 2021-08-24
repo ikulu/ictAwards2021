@@ -1,19 +1,19 @@
 <?php
-    require '../action.php';
+require '../action.php';
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ../index.php');
+	exit;
+}
+
+$noww = time(); // Checking the time now when home page starts.
+if ($noww > $_SESSION['expire']) {
+    session_destroy();
+    header('Location: ../index.php');
+}
+
     require '../../components/adminAside.php';
     require '../../components/adminNavbar.php';
     require '../../components/adminFooter.php';
-
-    if (!isset($_SESSION['loggedin'])) {
-      header('Location: ../index.php');
-      exit;
-    }
-    
-    $noww = time(); // Checking the time now when home page starts.
-    if ($noww > $_SESSION['expire']) {
-        session_destroy();
-        header('Location: ../index.php');
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,24 +34,7 @@
   <!-- ata table -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-
-    <script>
-    function showUser(str) {
-      if (str=="") {
-        document.getElementById("data").innerHTML="";
-        return;
-      }
-      var xmlhttp=new XMLHttpRequest();
-      xmlhttp.onreadystatechange=function() {
-        if (this.readyState==4 && this.status==200) {
-          document.getElementById("data").innerHTML=this.responseText;
-        }
-      }
-      xmlhttp.open("GET","./getApprovedPercatgory.php?q="+str,true);
-      xmlhttp.send();
-    }
-  </script>
-  </head>
+</head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
@@ -75,7 +58,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Approved Companies</h1>
+            <h1 class="m-0">confirmed Companies</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -87,33 +70,82 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-      <form>
-      <select name="users" onchange="showUser(this.value)">
-        <option value="">Select Category</option>
-          <?php 
-            $CATEGORIES = "SELECT * FROM categories";
-            $CATEGORIES = $con->query($CATEGORIES);
-            if ($CATEGORIES->num_rows > 0) {
-                while($row = $CATEGORIES->fetch_assoc()) {
-                  $Name = $row["name"];
-                  $id = $row["id"];
-                  echo '<option value="'.$id.'">'.$Name.'</option>';
-                }
-              }
-          ?>
-          </select>
-        </form>
-      <div id="data" class="card-body table-responsive p-0">
-        <table style="color:black" id="table_id" class="display table table-hover text-nowrap">
-            <tr><td>Approved Companies will be shown here</td></tr>
-        </table>
+      <div class="card-body table-responsive p-0">
+      <a href="../report/confirmed_pdf.php" style="color:white; font-size:15px"><i style="color:white; font-size:15px" class="fas fa-print"></i> PRINT</a></br>
+              <table id="table_id" class="display table table-hover text-nowrap">
+                <thead style='color:white'>
+                  <?php 
+                  // $nomineeTypeName = "SELECT distinct wapendekezanawapendekezwa.pendekezwaID,wapendekezwa.companyName FROM wapendekezanawapendekezwa,wapendekezwa WHERE wapendekezwa.id = wapendekezanawapendekezwa.pendekezwaID";
+                  $nomineeTypeName = "SELECT wapendekezwa.companyName,wapendekezanawapendekezwa.id,wapendekezanawapendekezwa.status,categories.name FROM wapendekezwa INNER JOIN wapendekezanawapendekezwa ON wapendekezwa.id=wapendekezanawapendekezwa.pendekezwaID INNER JOIN categories ON categories.id=wapendekezanawapendekezwa.categoriesFK  WHERE wapendekezanawapendekezwa.status IN('confirmed','Approved','Announced')";
+                  $normineeName = $con->query($nomineeTypeName);
 
-        </div>
-        </div><!--/. container-fluid -->
+                    if ($normineeName->num_rows > 0) {
+                      echo '<tr>
+                      <th>No</th>
+                      <th>Full Name</th>
+                      <th>Category Name</th>
+                      </tr>';
+                    }
+                  ?>
+                </thead>
+                <tbody style='color:black'>
+                  <?php 
+                  function add_or_update_params($url,$key,$value){
+                    $a = parse_url($url);
+                    $query = $a['query'] ? $a['query'] : '';
+                    parse_str($query,$params);
+                    $params[$key] = $value;
+                    $query = http_build_query($params);
+                    $result = '';
+                    if($a['path']){
+                        $result .=  $a['path'];
+                    }
+                    if($query){
+                        $result .=  '?' . $query;
+                    }
+                    return $result;
+                  }
+                
+                $url1 = '../../app/action.php?moreAnnounce=0';
+                $forLink = 0;
+
+                    $NO = 1;
+                    $link = '';
+                    $class = 'class="btn btn-primary"type="button" data-toggle="modal" data-target="#exampleModal"';
+                    if ($normineeName->num_rows > 0) {
+                      while($row = $normineeName->fetch_assoc()) {
+                        $Nnamee = $row["companyName"];
+                        $cnamee = $row["name"];
+                        $forLink = $row["id"];
+                        $url = add_or_update_params($url1,'more',$forLink);
+                        $link = 'href="'.$url.'"';
+                        $status = $row["status"];
+                        if($status == 'Approved' || $status == 'Announced'){
+                          $class = 'class="btn btn-danger" type="button" style="pointer-events: none;
+                          cursor: default;"';
+                          $more = "Approved";
+                        }else{
+                          $more = "Approve"; 
+                          $class = 'class="btn btn-primary"type="button"';
+                        }
+                        echo "<tr><td>" . $NO. "</td><td>". $Nnamee."</td><td>".$cnamee."</td>";
+                        $NO++;
+                      }
+                    } else {
+                      echo "<tr><td>No Company confirmed</td></tr>";
+                    }
+                  ?>
+                  </tr>
+                </tbody>
+              </table>
+
+            <!-- /.card-body -->
+          </div>
+      </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
   </div>

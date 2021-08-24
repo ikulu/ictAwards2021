@@ -1,5 +1,16 @@
 <?php
-    require '../../app/action.php';
+require '../action.php';
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ../index.php');
+	exit;
+}
+
+$noww = time(); // Checking the time now when home page starts.
+if ($noww > $_SESSION['expire']) {
+    session_destroy();
+    header('Location: ../index.php');
+}
+    
     require '../../components/adminAside.php';
     require '../../components/adminNavbar.php';
     require '../../components/adminFooter.php';
@@ -63,6 +74,10 @@
 .message{color: red; font-weight:bold; }
 
 </style>
+
+<!-- ata table -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -95,7 +110,7 @@
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
-        <a style="cursor:pointer" id="myBtn" class="nav-link">New Company</a>
+        <!-- <a style="cursor:pointer" id="myBtn" class="nav-link">New Company</a> -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -104,26 +119,23 @@
     <section class="content">
       <div class="container-fluid">
       <div class="card-body table-responsive p-0">
+      <a href="../nominated_pdf.php" style="color:white; font-size:15px"><i style="color:white; font-size:15px" class="fas fa-print"></i> PRINT</a></br>
               <table id="table_id" class="display table table-hover text-nowrap">
-                <thead>
-                  <?php 
-                  $sql = "SELECT * FROM wapendekezwa ORDER BY id DESC";
-                  $results = $con->query($sql);
-
+                <thead style='color:white'>
+                <?php 
+                  $results = mysqli_query($con, "SELECT wapendekezwa.companyName,categories.name From categories,wapendekezanawapendekezwa,wapendekezwa WHERE categories.id = wapendekezanawapendekezwa.categoriesFK AND wapendekezwa.id = wapendekezanawapendekezwa.pendekezwaID");
+                  
                     if ($results->num_rows > 0) {
                       echo '<tr>
                       <th>No</th>
-                      <th>Company Name</th>
-                      <th>Email Address</th>
-                      <th>Phone</th>
-                      <th>Type</th>
-                      <th>Action</th>
-                    </tr>';
+                      <th>Full Name</th>
+                      <th>Category</th>
+                      </tr>';
                     }
                   ?>
                 </thead>
-                <tbody>
-                  <?php 
+                <tbody style='color:black'>
+                <?php 
                     $NO = 1;
                     $more = "<select>
                     <option>Select</option>
@@ -132,24 +144,12 @@
                     <option>Disable</option>
                     </select>"; 
                     if ($results->num_rows > 0) {
-                      while($row = $results->fetch_assoc()) {
-                        $compnyName = $row["companyName"];
-                        $address = $row["companyAddress"];
-                        $contacts=$row["contact"];
-                        $normineeTypeID=$row["type"];
-                        
-                        $nomineeTypeName = "SELECT name FROM normineeType WHERE id = '$normineeTypeID'";
-                        $normineeName = $con->query($nomineeTypeName);
-                        if($normineeName->num_rows > 0){
-                          while($normineeNames = $normineeName->fetch_assoc()){
-                            $Nnamee = $normineeNames["name"];
-                          }
-                        }
-                        echo "<tr><td>" . $NO. "</td><td>". $compnyName."</td><td>". $address."</td><td>".$contacts."</td><td>". $Nnamee."</td><td><a>$more</a></td>";
+                      while($data = mysqli_fetch_array($results)){
+                        echo "<tr><td>" . $NO. "</td><td>". $data['companyName']."</td><td>". $data['name']."</td>";
                         $NO++;
                       }
                     } else {
-                      echo "<tr><td>No Company registered</td></tr>";
+                      echo "<tr><td>No Company nominated</td></tr>";
                     }
                   ?>
                   </tr>
@@ -198,11 +198,8 @@
             <select class="form-control" name="type">
                 <option value="">Select Type</option>
                 <?php
-                    $records = mysqli_query($con, "SELECT * From normineeType");
-                    while($data = mysqli_fetch_array($records)){
-                        echo "<option value='". $data['id'] ."'>" .$data['name'] ."</option>";
-                    }
-                ?> 
+                    
+                ?>
             </select>
         </div>
         <div class="row">
@@ -287,6 +284,27 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+</script>
+
+<!-- sript for ata table -->
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable({
+      "pagingType": "full_numbers",
+      "lengthMenu": [
+        [10, 25, 50, -1],
+        [10, 25, 50, "All"]
+      ],
+      responsive: true,
+        language: {
+          search: "_INPUT_",
+          searchPlaceholder: "Search company",
+        }
+    });
+} );
 </script>
 </body>
 </html>

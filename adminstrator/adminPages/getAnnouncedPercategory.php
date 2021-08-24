@@ -1,6 +1,5 @@
 
 <?php 
-
 require '../action.php';
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: ../index.php');
@@ -28,22 +27,19 @@ function add_or_update_params($url,$key,$value){
     }
     return $result;
 }
-
-$url1 = '../action.php?moreApprove=0';
-$more = "Approve";
 $forLink = 0;
 
     $q = $_GET['q'];
-    $sql="SELECT wapendekezanawapendekezwa.pendekezwaID,wapendekezwa.companyName,wapendekezanawapendekezwa.id,wapendekezanawapendekezwa.status FROM wapendekezanawapendekezwa,wapendekezwa WHERE wapendekezwa.id = wapendekezanawapendekezwa.pendekezwaID AND wapendekezanawapendekezwa.categoriesFK = '$q' AND wapendekezanawapendekezwa.status IN ('confirmed','Approved','Announced')";
-  
+    $sql = "SELECT wapendekezwa.companyName FROM wapendekezwa INNER JOIN wapendekezanawapendekezwa ON wapendekezwa.id=wapendekezanawapendekezwa.pendekezwaID WHERE wapendekezanawapendekezwa.categoriesFK = '$q' AND wapendekezanawapendekezwa.status = 'Announced'";
+    
     $result = mysqli_query($con,$sql);
-  
+    
     $cls = 'display table table-hover text-nowrap';
     $cardheader = 'card-header';
     $cardtitle = 'card-title';
     $margin = 'margin-left:90px';
     $card = 'card-body table-responsive p-0';
-  
+    
     echo '
   </div>
   <!-- /.card-header -->
@@ -56,7 +52,6 @@ $forLink = 0;
       echo '<tr>
       <th>No</th>
       <th>Company Name</th>
-      <th>Approve Companies</th>
       <th>'.$num.'</th>
     </tr>';
     }
@@ -72,45 +67,22 @@ $forLink = 0;
         $url = add_or_update_params($url1,'more',$forLink);
         $link = 'href="'.$url.'"';
         $status = $row["status"];
-        if($status == 'Approved' || $status == 'Announced'){
+        if($status == 'Announced'){
           $class = 'class="btn btn-danger" type="button" style="pointer-events: none;
           cursor: default;"';
-          $more = "Approved";
+          $more = "Announced";
         }else{
-          $more = "Approve";
+          $more = "Announce";
           $class = 'class="btn btn-primary"type="button"';
         }
         // $class = 'class="btn btn-primary"type="button" data-toggle="modal" data-target="#exampleModal"';
-        echo "<tr><td>" . $NO. "</td><td>". $row["companyName"]."</td><td><a $link $class>$more</a></td><td>";
+        echo "<tr><td>" . $NO. "</td><td>". $row["companyName"]."</td>";
         $NO++;
       }
     }else{
-      echo '<tr><td>No Company Confirmed for this category yet</td></tr>';
+      echo '<tr><td>No Company Announced for this category yet</td></tr>';
     }
     echo "  </tr>
     </tbody>
   </table>";
 ?>
-<html>
-<body>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Approve</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-        <p>Are you sure you want to Approve?</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <?php echo '<a '.$link.'>Approve</a>' ?>
-        </div>
-        </div>
-    </div>
-    </div>
-</body>
-</html>

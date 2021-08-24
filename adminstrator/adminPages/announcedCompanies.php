@@ -1,26 +1,26 @@
 <?php
-    require '../action.php';
+require '../action.php';
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ../index.php');
+	exit;
+}
+
+$noww = time(); // Checking the time now when home page starts.
+if ($noww > $_SESSION['expire']) {
+    session_destroy();
+    header('Location: ../index.php');
+}
+
     require '../../components/adminAside.php';
     require '../../components/adminNavbar.php';
     require '../../components/adminFooter.php';
-
-    if (!isset($_SESSION['loggedin'])) {
-      header('Location: ../index.php');
-      exit;
-    }
-    
-    $noww = time(); // Checking the time now when home page starts.
-    if ($noww > $_SESSION['expire']) {
-        session_destroy();
-        header('Location: ../index.php');
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tanzania ICT Awards | Companies</title>
+  <title>Tanzania ICT Awards | Announced Companies</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -30,7 +30,12 @@
   <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-  <script>
+
+  <!-- ata table -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+    <script>
     function showUser(str) {
       if (str=="") {
         document.getElementById("data").innerHTML="";
@@ -42,11 +47,11 @@
           document.getElementById("data").innerHTML=this.responseText;
         }
       }
-      xmlhttp.open("GET","./getdata.php?q="+str,true);
+      xmlhttp.open("GET","./getAnnouncedPercategory.php?q="+str,true);
       xmlhttp.send();
     }
   </script>
-</head>
+  </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
@@ -69,19 +74,18 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Norminated Companies</h1>
+            <h1 class="m-0">Announced Companies</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../adminPages/admnHome.php">Home</a></li>
-              <li class="breadcrumb-item active">Norminated Companies</li>
+              <li class="breadcrumb-item active">Announced Companies</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -102,8 +106,8 @@
           </select>
         </form>
       <div id="data" class="card-body table-responsive p-0">
-        <table id="table_id" class="display table table-hover text-nowrap">
-            <tr><td>Nominated Company will be shown here</td></tr>
+        <table style="color:black" id="table_id" class="display table table-hover text-nowrap">
+            <tr><td>Announced Companies will be shown here</td></tr>
         </table>
 
         </div>
@@ -148,8 +152,10 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard2.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+<!-- sript for ata table -->
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+
 <script>
 $(document).ready( function () {
     $('#table_id').DataTable({
@@ -161,7 +167,7 @@ $(document).ready( function () {
       responsive: true,
         language: {
           search: "_INPUT_",
-          searchPlaceholder: "Search Tangazo",
+          searchPlaceholder: "Search company",
         }
     });
 } );

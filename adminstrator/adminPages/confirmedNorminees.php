@@ -1,5 +1,17 @@
 <?php
-    require '../../app/action.php';
+require '../action.php';
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ../index.php');
+	exit;
+}
+
+$noww = time(); // Checking the time now when home page starts.
+if ($noww > $_SESSION['expire']) {
+    session_destroy();
+    header('Location: ../index.php');
+}
+
+    
     require '../../components/adminAside.php';
     require '../../components/adminNavbar.php';
     require '../../components/adminFooter.php';
@@ -38,7 +50,6 @@
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
-
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__wobble" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
@@ -62,7 +73,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="../admnHome.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="../adminPages/admnHome.php">Home</a></li>
               <li class="breadcrumb-item active">Confirmed Companies</li>
             </ol>
           </div><!-- /.col -->
