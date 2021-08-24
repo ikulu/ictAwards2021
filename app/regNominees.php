@@ -108,150 +108,443 @@ require 'action.php';
         </style>
         <script>
 $(document).ready(function(){
-	$("#Form1").hide();
-    $("#Form2").hide();
-    $("#Form3").hide();
-    $("#Form4").hide();
-    $("#Form5").hide();
-    $("#Form6").hide();
-    $("#Form7").hide();
-    $("#Form8").hide();
-    $("#Form9").hide();
-    $("#Form10").hide();
-    $("#Form11").hide();
-    $("#Form12").hide();
-    $("#Form13").hide();
+    document.getElementById('phoneNumber1').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber1');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber2').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber2');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber3').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber3');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber4').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber4');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber5').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber5');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber6').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber6');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber7').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber7');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber8').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber8');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber9').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber9');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber10').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber10');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber11').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber11');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber12').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber12');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber13').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber13');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber14').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber14');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber15').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber15');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+    document.getElementById('phoneNumber16').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('phoneNumber16');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+    });
+
+	$("#1").hide();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#16").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
+    $("#16").hide();
 
   $("#btn1").click(function(){
-    $("#Form1").show();
-    $("#btn1").hide();
+    $("#1").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#16").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
   
   $("#btn2").click(function(){
-    $("#Form2").show();
-    $("#btn2").hide();
+    $("#2").show();
+    $("#1").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#16").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn3").click(function(){
-    $("#Form3").show();
-    $("#btn3").hide();
+    $("#3").show();
+    $("#2").hide();
+    $("#1").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#16").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn4").click(function(){
-    $("#Form4").show();
-    $("#btn4").hide();
+    $("#4").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#1").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#16").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn5").click(function(){
-    $("#Form5").show();
-    $("#btn5").hide();
+    $("#5").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#1").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#16").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn6").click(function(){
-    $("#Form6").show();
-    $("#btn6").hide();
+    $("#6").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#1").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#16").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn7").click(function(){
-    $("#Form7").show();
-    $("#btn7").hide();
+    $("#7").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#1").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#16").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn8").click(function(){
-    $("#Form8").show();
-    $("#btn8").hide();
+    $("#8").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#1").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#16").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn9").click(function(){
-    $("#Form9").show();
-    $("#btn9").hide();
+    $("#9").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#1").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#16").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn10").click(function(){
-    $("#Form10").show();
-    $("#btn10").hide();
+    $("#10").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#1").hide();
+    $("#11").hide();
+    $("#16").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn11").click(function(){
-    $("#Form11").show();
-    $("#btn11").hide();
+    $("#11").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#1").hide();
+    $("#16").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn12").click(function(){
-    $("#Form12").show();
-    $("#btn12").hide();
+    $("#12").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#16").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#1").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
   $("#btn13").click(function(){
-    $("#Form13").show();
-    $("#btn13").hide();
+    $("#13").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#16").hide();
+    $("#1").hide();
+    $("#14").hide();
+    $("#15").hide();
   });
 
-
-  $("#btn21").click(function(){
-    $("#Form1").hide();
-    $("#btn1").show();
+  $("#btn14").click(function(){
+    $("#14").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#1").hide();
+    $("#16").hide();
+    $("#15").hide();
   });
 
-  $("#btn22").click(function(){
-    $("#Form2").hide();
-    $("#btn2").show();
+  $("#btn15").click(function(){
+    $("#15").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#1").hide();
+    $("#16").hide();
   });
 
-  $("#btn23").click(function(){
-    $("#Form3").hide();
-    $("#btn3").show();
+    $("#btn16").click(function(){
+    $("#16").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
+    $("#10").hide();
+    $("#11").hide();
+    $("#12").hide();
+    $("#13").hide();
+    $("#14").hide();
+    $("#15").hide();
+    $("#1").hide();
   });
+function phoneFormat(input){
+        // Strip all characters from the input except digits
+        input = input.replace(/\D/g,'');
+        
+        // Trim the remaining input to ten characters, to preserve phone number format
+        input = input.substring(0,10);
 
-  $("#btn24").click(function(){
-    $("#Form4").hide();
-    $("#btn4").show();
-  });
-
-  $("#btn25").click(function(){
-    $("#Form5").hide();
-    $("#btn5").show();
-  });
-
-  $("#btn26").click(function(){
-    $("#Form6").hide();
-    $("#btn6").show();
-  });
-
-  $("#btn27").click(function(){
-    $("#Form7").hide();
-    $("#btn7").show();
-  });
-
-  $("#btn28").click(function(){
-    $("#Form8").hide();
-    $("#btn8").show();
-  });
-
-  $("#btn29").click(function(){
-    $("#Form9").hide();
-    $("#btn9").show();
-  });
-
-  $("#btn210").click(function(){
-    $("#Form10").hide();
-    $("#btn10").show();
-  });
-
-  $("#btn211").click(function(){
-    $("#Form11").hide();
-    $("#btn11").show();
-  });
-
-  $("#btn212").click(function(){
-    $("#Form12").hide();
-    $("#btn12").show();
-  });
-
-  $("#btn213").click(function(){
-    $("#Form13").hide();
-    $("#btn13").show();
-  });
+        // Based upon the length of the string, we add formatting as necessary
+        var size = input.length;
+        if(size == 0){
+                input = input;
+        }else if(size < 4){
+                input = input;
+        }else if(size < 7){
+                input = input.substring(0,3)+'- '+input.substring(3,6);
+        }else{
+                input = input.substring(0,3)+'- '+input.substring(3,6)+' - '+input.substring(6,10);
+        }
+        return input; 
+}
 });
 </script>
     </head>
@@ -311,47 +604,70 @@ $(document).ready(function(){
                             <div class="form-floating mb-3">
                                 <div class="row">
                                     <div class="col">
-                                        <h4 style="font-weight:bold">BEST ICT SECTOR AWARDS</h4>
+                                        <h4 style="font-weight:bold">BEST ICT INNOVATION AWARDS</h4>
                                         <div class="row">
                                             <div class="col">
-                                                <h5>Internet Service Provider</h5>
-                                                <div>
+                                                <h5><a href="#btn1" id="btn1">Best ICT Incubation hub</a></h5>
+                                                <div id="1">
+                                                    <p>This award recognises Incubators that have played a
+pivotal role in the tech and business eco-system by
+supporting ideas and startup companies with
+innovation spaces, office spaces, link to funding, and
+connections into academic environments.</p>
                                                     <!-- Name input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisISPInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Full Organization name</label>
+                                                        <label for="name">Institution Name</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                                     <!-- site input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisISPInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Organization Website link</label>
+                                                        <label for="name">Contact Person</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                    <div class="form-floating mb-3">
+                                                        <input class="form-control" id="phoneNumber1" type="text" name="bisISPInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                        <label for="name">Phone Number</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                    <div class="form-floating mb-3">
+                                                        <textarea class="form-control" id="" name="bisISPInputWeb22" rows="2" cols="10"> </textarea>
+                                                        <label for="name">Why</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                                 </div>
-                                                <!--<select class="form-control" name="bisISP"> 
-                                                    <option value="">Internet Service Provider </option>
-                                                    <?php
-                                                        $records = mysqli_query($con, "SELECT * From wapendekezwa WHERE type IN(1)");  // Use select query here 
-                                                        while($data = mysqli_fetch_array($records)){
-                                                        echo "<option value='". $data['id'] ."'>" .$data['companyName'] ."</option>";  // displaying data in option menu
-                                                        }	
-                                                    ?> 
-                                                </select>-->
                                             </div>
                                             <div class="col">
-                                            <h5>Infrastructure Service</h5>
-                                            <div>
+                                            <h5><a href="#btn2" id="btn2">Best ICT Startup</a></h5>
+                                            <div id="2">
+                                                <p>This award recognises the outstanding local ICT
+startup companies focusing on software, hardware
+and social innovation areas and rewards their
+distinguished development based on growth,
+innovation, creativity, functionality, market potential
+and performance.</p>
                                                     <!-- Name input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisISInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Full Organization name</label>
+                                                        <label for="name">Institution Name</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                                     <!-- site input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisISInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Organization Website link</label>
+                                                        <label for="name">Contact Person</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                    <!-- site input-->
+                                                    <div class="form-floating mb-3">
+                                                        <input class="form-control" id="phoneNumber2" type="text" name="bisISInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                        <label for="name">Phone Number</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                    <div class="form-floating mb-3">
+                                                        <textarea class="form-control" id="" name="bisISInputWeb22" rows="2" cols="10"> </textarea>
+                                                        <label for="name">Why</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                             </div>
@@ -360,36 +676,66 @@ $(document).ready(function(){
                                         
                                         <div class="row">
                                             <div class="col">
-                                                <h5>Application Service</h5>
-                                                <div>
+                                                <h5><a id="btn3"href="#btn3">Best Innovative ICT Student (Female)</a></h5>
+                                                <div id="3">
+                                                <p>This award is given in recognition of a Higher
+Learning Institution female student who is
+developing an ICT innovation, demonstrated passion,
+commitment and talent in the ICT field.</p>
                                                     <!-- Name input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisASInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Full Organization name</label>
+                                                        <label for="name">Full Name</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                                     <!-- site input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisASInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Organization Website link</label>
+                                                        <label for="name">Institution/College/University</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                    <!-- site input-->
+                                                    <div class="form-floating mb-3">
+                                                        <input class="form-control" id="phoneNumber3" type="text" name="bisASInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                        <label for="name">Phone Number</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                    <div class="form-floating mb-3">
+                                                        <textarea class="form-control" id="" name="bisASInputWeb22" rows="2" cols="10"> </textarea>
+                                                        <label for="name">Why</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                                  </div>   
                                             </div>
                                             
                                             <div class="col">
-                                            <h5>Hardware Solution</h5>
-                                            <div>
+                                            <h5><a id="btn4" href="#btn4">Best Innovative ICT Student (Male)</a></h5>
+                                            <div id="4">
+                                            <p>This award is given in recognition of a Higher
+Learning Institution male student who is developing
+an ICT innovation, demonstrated passion,
+commitment and talent in the ICT field.</p>
                                                     <!-- Name input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisHSInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Full Organization name</label>
+                                                        <label for="name">Full Name</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                                     <!-- site input-->
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="name" type="text" name="bisHSInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Organization Website link</label>
+                                                        <label for="name">Institution/College/University</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                                                                        <!-- site input-->
+                                                    <div class="form-floating mb-3">
+                                                        <input class="form-control" id="phoneNumber4" type="text" name="bisHSInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                        <label for="name">Phone Number</label>
+                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                                    </div>
+                                                     <div class="form-floating mb-3">
+                                                        <textarea class="form-control" id="" name="bisHSInputWeb22" rows="2" cols="10"> </textarea>
+                                                        <label for="name">Why</label>
                                                         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                                     </div>
                                             </div>
@@ -398,234 +744,445 @@ $(document).ready(function(){
                                         </div>
                                        
                                         <br>
-                                        <div class="row">
-                                           <div class="col">
-                                           <h5>Software Development</h5>
-                                           <div>
-                                                    <!-- Name input-->
-                                                    <div class="form-floating mb-3">
-                                                        <input class="form-control" id="name" type="text" name="bisSDInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Full Organization name</label>
-                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-                                                    </div>
-                                                    <!-- site input-->
-                                                    <div class="form-floating mb-3">
-                                                        <input class="form-control" id="name" type="text" name="bisSDInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                        <label for="name">Organization Website link</label>
-                                                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-                                                    </div>
-                                                    
-                                                </div>
-                                           </div>
-                                    
-                                        <div class="col">
-                                        <h5> </h5>
-                                        
-
-                                        </div>
+                            
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
                                 
                                 <br>
                                 <div class="row">
-                                <h4>FINANCIAL SECTOR AWARDS</h4>
+                                <h4><a id="btn5" href="#btn5">BEST MOBILE NETWORK OPERATOR</a></h4>
                                 <div class="col">
-                                    <h5>Best Digitised Financial Institution</h5>
-                                    <div>
+                                    <div id="5">
+                                    <p>These are mobile network companies that continually
+seeks to enhance the development process and
+played big role in Corporate Social Responsibilities
+(CSR).</p>
                                         <!-- Name input-->
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="name" type="text" name="fsaInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                            <label for="name">Full Organization name</label>
+                                            <label for="name">Operator Name</label>
                                             <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                         </div>
                                         <!-- site input-->
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="name" type="text" name="fsaInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                            <label for="name">Organization Website link</label>
+                                            <label for="name">Contact Person</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        <!-- site input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="phoneNumber5" type="text" name="fsaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                            <label for="name">Phone Number</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="fsaInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
                                             <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                    <h4>INSURANCE SECTOR AWARDS</h4>
+                                    <h4><a id="btn6"href="#btn6">BEST COMPANY PROVIDING SERVICES
+ON IT</a></h4>
                                     <div class="col">
-                                    <h5>Best Digitised Insurance Agency</h5>
-                                    <div>
+                                    <div id="6">
+                                    <p>This award is for outsourcing IT service providers
+that provide the application of business and
+technical expertise to enable organizations in the
+creation, management, and optimization of or access
+to information and business processes.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="isaInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">Company Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="isaInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Contact Person</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                                                                        <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber6" type="text" name="isaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                              <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="isaInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>AGRICULTURAL SECTOR AWARDS</h4>
+                                <h4><a id="btn7" href="#btn7">BEST COMPANY IN SOFTWARE
+DEVELOPMENT</a></h4>
                                 <div class="col">
-                                <h5<>Best Digitised Agricultural Institution</h5>
-                                    <div>
+                                    <div id="7">
+                                        <p>These are Local software development companies
+that their software solution has significant impact to
+local challenges.</p>
                                         <!-- Name input-->
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="name" type="text" name="asaInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                            <label for="name">Full Organization name</label>
+                                            <label for="name">Company Name</label>
                                             <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                         </div>
                                         <!-- site input-->
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="name" type="text" name="asaInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                            <label for="name">Organization Website link</label>
+                                            <label for="name">Contact Person</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        <!-- site input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="phoneNumber7" type="text" name="asaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                            <label for="name">Phone Number</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="asaInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
                                             <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>HEALTH SECTOR AWARDS</h4>
+                                <h4><a id="btn8" href="#btn8">BEST ICT TRANSFORMATIVE TRAINING
+INSTITUTION</a></h4>
                                     <div class="col">
-                                    <h5>Best Digitised Health Centre/Institution</h5>
-                                        <div>
+                                        <div id="8">
+                                        <p>This Award recognizes achievements of Schools and
+Educational institutions for their optimum utilization
+of ICT in the education sector. The Award will be
+awarded on the basis of implementation of digital
+education as an effective tool for learning service.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="hsaInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">Institution Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="hsaInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Contact Person</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber8" type="text" name="hsaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="hsaInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>EDUCATION SECTOR AWARDS</h4>
+                                <h4><a id="btn9" href="#btn9">BEST ICT TRANSFORMATIVE INSTITUTION
+IN PROVISION OF HEALTH SERVICES</a></h4>
                                 <div class="col">
-                                <h5>Best Digitised Training Institution</h5>
-                                        <div>
+                                        <div id="9">
+                                        <p>These are health facilities that have adapted to
+digital technology and have efficiently used digital
+tools to improve their efficiency in delivering health
+services.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="esaInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">Institution Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="esaInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Contact Person</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber9" type="text" name="esaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="esaInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                 </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>REGULATORY AWARDS</h4>
+                                <h4><a id="btn10" href="#btn10">BEST ICT INSTITUTION PROVIDING
+SERVICES IN FINANCIAL SECTOR</a></h4>
                                     <div class="col">
-                                    <h5>Best Digitised Service Regulatory Body</h5>
-                                        <div>
+                                        <div id="10">
+                                        <p>This award will go to the most innovative and agile
+fintech that are leading digital transformation in the
+financial sector.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="raInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">Institution Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="raInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Contact Person</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber10" type="text" name="raInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="raInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>LOCAL GOVERNMENT AUTHORITY AWARDS</h4>
+                                <h4><a id="btn16" href="#btn16">BEST FINANCIAL TECHNOLOGY COMPANY AWARD</a></h4>
                                     <div class="col">
-                                    <h5>Best Digitised Local Government Authority</h5>
-                                        <div>
+                                        <div id="16">
+                                        <p>This award will go to the most innovative and agile
+bank that are leading digital transformation in the
+financial sector.</p>
+                                            <!-- Name input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="name" type="text" name="raInput2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Institution Name</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="name" type="text" name="raInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Contact Person</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber11" type="text" name="raInputWeb22" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="raInputWeb222" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="color:#f4623a"/>
+
+                                <br>
+                                <div class="row">
+                                <h4>BEST ICT RESEARCHER AWARDS</h4>
+                                    <div class="col">
+                                    <h5><a id="btn11" href="#btn11">Best Female ICT researcher</a></h5>
+                                        <div id="11">
+                                        <p>This award recognises female individuals whose
+research works has contributed to develop or
+promote the ICT sector in Tanzania.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="laaInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">Full Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="laaInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Institution</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber12" type="text" name="laaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="laaInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                    <h5><a id="btn12" href="#btn12">Best Male ICT researcher</a></h5>
+                                        <div id="12">
+                                        <p>This award recognises male individuals who have
+research contributions in terms of development or
+promotion of ICT in Tanzania.</p>
+                                            <!-- Name input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="name" type="text" name="laaInput2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Full Name</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="name" type="text" name="laaInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Institution</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber13" type="text" name="laaInputWeb22" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="laaInputWeb222" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>BEST INNOVATOR/STARTUP INSTITUTION OF THE YEAR</h4>
+                                <h4><a id="btn13" href="#btn13">BEST COMPANY IN DIGITAL INSURANCE
+SERVICES</a></h4>
                                     <div class="col">
-                                        <div>
+                                        <div id="13">
+                                        <p>This award is given to the insurance organization that
+has well harnessed technology and digital solutions
+to improve business processes and leverage overall
+client experience.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="byieInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">Company Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="byieInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Contact Person</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber14" type="text" name="byieInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="byieInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
+                                <hr style="color:#f4623a"/>
 
                                 <br>
                                 <div class="row">
-                                <h4>BEST ICT RESEARCH INSTITUTION OF THE YEAR</h4>
+                                <h4><a id="btn14" href="#btn14">BEST LGA IN USING ICT APPLICATIONS</a></h4>
                                 <div class="col">
-                                        <div>
+                                        <div id="14">
+                                        <p>These are Local Government Authorities that are
+using tech solutions and digital tools to improve
+convenience, efficiency and productivity.</p>
                                             <!-- Name input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="birInput" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Full Organization name</label>
+                                                <label for="name">LGA Name</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
                                             <!-- site input-->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="name" type="text" name="birInputWeb" placeholder="Enter your name..." data-sb-validations="required" />
-                                                <label for="name">Organization Website link</label>
+                                                <label for="name">Contact Person</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                             </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber15" type="text" name="birInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="birInputWeb22" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
+                                        </div>
+                                </div>
+                                <hr style="color:#f4623a"/>
+                                <br>
+                                <div class="row">
+                                <h4><a id="btn15" href="#btn15">BEST ICT SOLUTION IN AGRICULTURE</a></h4>
+                                <div class="col">
+                                        <div id="15">
+                                        <p>This award recognises local innovators who are
+creating digital solutions for agriculture. These are
+individuals, companies or institutions that are
+spearheading game changing agriculture solutions.</p>
+                                            <!-- Name input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="name" type="text" name="birInput2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Full Name</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="name" type="text" name="birInputWeb2" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Contact Person</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <!-- site input-->
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="phoneNumber16" type="text" name="birInputWeb22" placeholder="Enter your name..." data-sb-validations="required" />
+                                                <label for="name">Phone Number</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="" name="birInputWeb222" rows="2" cols="10"> </textarea>
+                                            <label for="name">Why</label>
+                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                                        </div>
                                         </div>
                                 </div>
                             </div>

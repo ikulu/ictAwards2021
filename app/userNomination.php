@@ -87,7 +87,7 @@ require 'action.php';
       <th class="th-sm">Category
 
       </th>
-      <th class="th-sm">Company
+      <th class="th-sm">Company/Institution/Individual
 
       </th>
     </tr>
