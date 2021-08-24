@@ -51,10 +51,10 @@ AWARDS</h1>
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">1st Annual Tanzania TEHAMA Awards - celebrating the
+                        <p class="text-white-75 mb-5">1<sup>st</sup> Annual Tanzania ICT Awards - Celebrating the
 pioneers of ICT and encouraging excellence.<br><br>
 The Technology Awards are the most comprehensive
-celebration of technology in the year.
+celebration of Technology in the year.
 </p>
                         <a class="btn btn-primary btn-xl" href="./app/regNominees.php">NOMINATE Now</a>
                         <br><br>
@@ -105,14 +105,51 @@ celebration of technology in the year.
                 <hr class="divider" />
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-9"> 
-                    <ol class="list-unstyled">
-                        <li class="mb-2"><span style="font-weight:bold; color:#f4623a">STAGE ONE</span>: Nominations.</li>
-                        <li class="mb-2"><span style="font-weight:bold; color:#f4623a">STAGE TWO</span>: Evaluation, complete a submission form, verification, publicity and shortlisting.</li>
-                        <li class="mb-2"><span style="font-weight:bold; color:#f4623a">STAGE THREE</span>: Notifications of shortlisted finalists.</li>
-                        <li class="mb-2"><span style="font-weight:bold; color:#f4623a">STAGE FOUR</span>: Judging.</li>
-                        <li class="mb-2"><span style="font-weight:bold; color:#f4623a">STAGE FIVE</span>: Announcement of Finalists</li>
-                        <li class="mb-2"><span style="font-weight:bold; color:#f4623a">STAGE SIX AND FINAL STAGE</span>: Award Ceremony.</li>
-                    </ol>
+                    <table class="table table-dark">
+                        <tbody>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE ONE</span></td>
+                            <td>Nominations</td>
+                            <td>24<sup>th</sup> August- 10<sup>th</sup> September</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE TWO</span</td>
+                            <td>Evaluation, complete a submission form, verification, publicity and shortlisting.</td>
+                            <td>11<sup>th</sup> September - 18<sup>th</sup> September</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE THREE</span</td>
+                            <td>Notifications of shortlisted finalists.</td>
+                            <td>19<sup>th</sup> September</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE FOUR</span</td>
+                            <td>Public vote.</td>
+                            <td>20<sup>th</sup> September - 27<sup>th</sup> September</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE FIVE</span</td>
+                            <td>Evaluation & System update.</td>
+                            <td>28<sup>th</sup> September - 30<sup>th</sup> September</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE SIX</span</td>
+                            <td>Judging.</td>
+                            <td>01<sup>th</sup> October - 03<sup>th</sup> October</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE SEVEN</span</td>
+                            <td>Announcement of Finalists.</td>
+                            <td>08<sup>th</sup> October</td>
+                            </tr>
+                            <tr>
+                            <td><span style="font-weight:bold; color:#f4623a">STAGE EIGTH</span</td>
+                            <td>Award Ceremony.</td>
+                            <td>21<sup>st</sup> October</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>For More Information call Us: 0738171742</p>
                     </div>
                     <a class="btn btn-light btn-xl" href="./app/regNominees.php">Nominate Now!</a>
                 </div>
